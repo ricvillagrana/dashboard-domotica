@@ -15,7 +15,8 @@
             </div>
         </blockquote>
         @endif
-        <form class="ui form" action="/auth" method="POST">@csrf
+        <form class="ui form" action="/auth" method="POST">
+     	    {{ csrf_field() }}
             <label for="user">Usuario</label>
             <input class="ui input" name="username" type="text" placeholder="Usuario" id="user">
             <label for="password">Contraseña</label>

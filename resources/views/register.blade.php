@@ -5,7 +5,8 @@
     <div class="column six wide card ui">
         <h1>Registro</h1>
         <p>Casa inteligente</p>
-        <form class="ui form" action="/user/create" method="POST">@csrf
+        <form class="ui form" action="/user/create" method="POST">
+	    {{ csrf_field() }}
             <div class="row">
                 <div class="column">
                     <label for="user">Usuario</label>
