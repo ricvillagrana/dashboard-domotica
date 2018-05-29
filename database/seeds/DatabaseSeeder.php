@@ -17,8 +17,8 @@ class DatabaseSeeder extends Seeder
         // Creating admin user
         DB::table('users')->insert([
             'username'  => 'admin',
-            'name'      => 'Ricardo',
-            'lastname'  => 'Villagrana',
+            'name'      => 'Admin',
+            'lastname'  => '',
             'password'  => bcrypt('admin'),
             'superuser' => true,
             'created_at'    => date("Y/m/d h:i:sa")
