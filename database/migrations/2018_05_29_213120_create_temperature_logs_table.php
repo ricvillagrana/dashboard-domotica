@@ -14,7 +14,7 @@ class CreateTemperatureLogsTable extends Migration
     public function up()
     {
         Schema::create('temperature_logs', function (Blueprint $table) {
-            $table->increments('id');
+            $table->double('temperature', 8, 2);
             $table->timestamps();
         });
     }

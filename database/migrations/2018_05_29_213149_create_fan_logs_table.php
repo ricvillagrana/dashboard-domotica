@@ -14,7 +14,7 @@ class CreateFanLogsTable extends Migration
     public function up()
     {
         Schema::create('fan_logs', function (Blueprint $table) {
-            $table->increments('id');
+            $table->boolean('active');
             $table->timestamps();
         });
     }

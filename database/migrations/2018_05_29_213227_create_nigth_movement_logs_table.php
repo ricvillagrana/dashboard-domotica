@@ -14,7 +14,7 @@ class CreateNigthMovementLogsTable extends Migration
     public function up()
     {
         Schema::create('nigth_movement_logs', function (Blueprint $table) {
-            $table->increments('id');
+            $table->boolean('active');
             $table->timestamps();
         });
     }

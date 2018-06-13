@@ -27,21 +27,19 @@ class DatabaseSeeder extends Seeder
         // Creating main actions
         DB::table('actions')->insert([
             'name'          => 'Temperatura',
+            'slug'          => 'temperature',
             'description'   => 'Ajustar temperatura de manera automática (La temperatura establecida en el perfil).',
             'created_at'    => date("Y/m/d h:i:sa")
         ]);
         DB::table('actions')->insert([
-            'name'          => 'Compartir temperatura del exterior',
-            'description'   => 'Dejar que la ventana se abara si la temperatura exterior es adecuada.',
-            'created_at'    => date("Y/m/d h:i:sa")
-        ]);
-        DB::table('actions')->insert([
             'name'          => 'Luces nocturnas',
+            'slug'          => 'night_lights',
             'description'   => 'Encender luces cuando bajes de la cama.',
             'created_at'    => date("Y/m/d h:i:sa")
         ]);
         DB::table('actions')->insert([
             'name'          => 'Luces automáticas',
+            'slug'          => 'lights',
             'description'   => 'Encender luces de manera automática cuando no haya suficiente luz exterior.',
             'created_at'    => date("Y/m/d h:i:sa")
         ]);

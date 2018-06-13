@@ -14,7 +14,7 @@ class CreateLightLogsTable extends Migration
     public function up()
     {
         Schema::create('light_logs', function (Blueprint $table) {
-            $table->increments('id');
+            $table->boolean('active');
             $table->timestamps();
         });
     }

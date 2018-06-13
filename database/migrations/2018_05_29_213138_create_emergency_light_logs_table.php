@@ -14,7 +14,7 @@ class CreateEmergencyLightLogsTable extends Migration
     public function up()
     {
         Schema::create('emergency_light_logs', function (Blueprint $table) {
-            $table->increments('id');
+            $table->boolean('active');
             $table->timestamps();
         });
     }

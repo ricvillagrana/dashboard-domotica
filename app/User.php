@@ -24,17 +24,14 @@ class User extends Authenticatable
         if (Auth::attempt($credentials)) {
             $userLogged = \App\User::where(['username' => $user->username])->get();
             session(['user' => $userLogged[0]]);
-                return true;
+            return true;
         }
         
         return false;
     }
     
     public static function logout () {
-        if(session(['user' => null])){
-            return true;
-        }
-        return false;
+        return session(['user' => null]);
     }
     
     /**
